@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Laravel
+    env: docker
+    plan: free
+    startCommand: php artisan serve --host=0.0.0.0 --port=8000
+    staticPublishPath: public
+    envVars:
+      - key: APP_ENV
+        value: production
